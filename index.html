@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvedor Victor Sanches</title>
+    <meta name="description" content="Esse site tem o intuito de mostrar um pouco do meu trabalho e meus projetos">
+
+    <link rel="stylesheet" href="./style.css">
+
+    
+</head>
+<body>
+    <!--header-->
+    <header>
+        <h1>Victor <span>Sanches</span></h1>
+        
+        <nav class="navegacao" id="nav">
+            <ul> 
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#portifolio">Portifolio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu" id="menu"><span></span><span></span><span></span></div>
+
+    </header>
+    <!--fim header-->
+
+    <!--home-->
+    <section class="home" id="home">
+        
+            
+            <div class="home_texto">
+                <h2>Olá, eu sou</h2>
+                <div style="display: flex; align-items: center;">
+                    <h1 class="digitar">Victor Sanches.</h1> <span class="digitando">|</span>
+                </div>
+                <h2 class="ultimo">Desenvolvedor <span style="font-style: italic;">FRONT-END</span></h2>
+                <div style="display: flex; gap: 30px;">
+                    <a href="#">Download CV</a>
+                    <!--<a href="#">Git-hub</a>-->
+                </div>
+                
+            </div>
+
+            <img src="./img/my_image.png" alt="minha foto">
+        
+    </section>
+    <!--fim home-->
+
+    <!--tecnologias-->
+    <section class="tecnologias">
+        <img src="./img/html-5.png" title="HTML5">
+        <img src="./img/css-3.png" title="CSS3">
+        <img src="./img/script-java.png" title="JavaScript">
+    </section>
+    <!--fim tecnologias-->
+
+    <!--sobre-->
+    <section class="sobre" id="sobre">
+        <div class="sobre_mim" >
+            <h1>Sobre Mim</h1>
+            <h2>Perfil profissional - Aqui está tudo sobre mim</h2>
+            <div style="display: flex; gap: 10px; justify-content: center;">
+                <span class="cima"></span>
+                <span class="baixo"></span>
+                <span class="cima"></span>
+            </div>
+        </div>
+        <br>
+        <div class="texto" >
+            <p>
+                Inicie minha jornada na área da programação em 2019, 
+                quando passei no vestibular de escola técnica estadual ETEC, 
+                onde cursei meu ensino médio juntamente como o curso de 
+                desenvolvimento web ambos concluídos no final de 2021.
+                Todavia, em 2022 foquei todo meu tempo nos estudos, afim de ter 
+                minha aprovação nos vestibulares em que queria, entre eles 
+                estava o ITA, embora não tenha sido aprovado estava decidido em me dar mais 
+                um ano para estudar, foi ai que em maio de 2023 resolvi investir na 
+                minha carreira como desenvolvedor web.
+            </p>
+            <br>
+            <p>
+                Comecei me inscrevendo no curso da Devmedia para me aperfeiçoar no <span>FRONT-END</span>, 
+                enquanto cursava aproveitei para usar um pouco do meu conhecimento básico para 
+                criar este site que vocês estão vendo. Muito provavelmente assim que terminar 
+                e hospedar meu site já estarei desenvolvendo mais projetos afim de mostra-los a vocês.
+            </p>
+            <br>
+            <p>
+                Algumas das tecnologias que sei no momento são: <span>HTML, CSS e JavaScript</span>.
+            </p>
+            <br>
+        </div>
+    </section>
+    <!--fim sobre-->
+
+    <!--portifolio-->
+    <section class="portifolio" id="portifolio">
+        <br>
+        <h1>Portifolio</h1>
+        <br>
+        <div class="lista_projeto">
+            <a class="iniciar" ><img src="./img/em_breve-branco.png" alt="progeto"></a>
+            <a class="iniciar" ><img src="./img/em_breve-branco.png" alt="progeto"></a>
+            <a class="iniciar" ><img src="./img/em_breve-branco.png" alt="progeto"></a>
+            <a id="portifolio_exibir1"><img src="./img/em_breve-branco.png" alt="progeto"></a>
+            <a id="portifolio_exibir2"><img src="./img/em_breve-branco.png" alt="progeto"></a>
+            <a id="portifolio_exibir3"><img src="./img/em_breve-branco.png" alt="progeto"></a>
+        </div>
+        <br>
+        <a class="active_btn" id="btnPortifolio"><h2>Mostrar mais</h2></a >
+        <a href="#btnPortifolio" id="esconder_portifolio"><h2>Mostrar menos</h2></a>
+        <br>
+    </section>
+    <!--fim portifolio-->
+
+    <!--contato-->
+    <section class="contato" id="contato">
+        <h1>Formas de contato</h1>
+        <div class="redes_sociais">
+            <div>
+                <img src="./img/o-email.png" alt="email">
+                <p>e-mail: vs826156@gmail.com</p>
+            </div>
+            <div>
+                <img src="./img/whatsapp.png" alt="whatsapp">
+                <p>celular: (17) 99711-1264</p>
+            </div>
+            <div>
+                <img src="./img/linkedin.png" alt="linkedin">                           
+                <a target="_blank" href="https://www.linkedin.com/in/v%C3%ADctor-sanches-de-almeida-1220321b7"><p>Victor Sanches de Almeida</p></a>
+            </div>
+        </div>
+    </section>
+    <!--fim contato-->
+
+    <!--footer-->
+    <footer>
+        <p>Todos os direitos reservados. Criado por Victor Sanches de Almeida</p>
+    </footer>
+    <!--fim footer-->
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

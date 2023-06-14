@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: rgb(27, 27, 27);
+}
+
+/*header*/
+
+header{
+    width: 100%;
+    height: 8vh;
+    background-color: rgba(8, 8, 8, 0.904);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 1;
+    box-shadow: 1px 1px 8px rgb(51, 51, 51);
+}
+
+header h1{
+    color: rgb(255, 232, 232);
+}
+
+header h1 span{
+    color: rgb(255, 46, 46);
+}
+
+.navegacao ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 1.3rem;
+}
+
+.navegacao  a {
+    color: rgb(214, 214, 214);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.navegacao  a:hover{
+    transition: 1s;
+    color: white;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+.menu{
+    display: none;
+}
+
+
+    /*responsive header*/
+
+    @media only screen and (max-width: 750px) {
+        
+        .menu{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            cursor: pointer;
+            padding: 20px;
+        }
+        
+
+        .menu span{
+            padding: 1px 15px;
+            background-color: white;
+        }
+        
+        .navegacao{
+           display: none;
+           position: absolute;
+           width: 100%;
+           top: 8vh;
+           background-color: rgba(8, 8, 8, 0.904);
+           height: 40vh;
+        }
+
+        .navegacao.active{
+            display: flex;
+            justify-content: center;
+        }
+
+        .navegacao ul{
+            padding: 20px;
+            gap: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 25px;
+        }
+    }
+
+    /*responsive header*/
+/*fim header*/
+
+
+/*home*/
+
+
+.home{
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 10%;
+    background-color: rgb(32, 32, 32);
+}
+
+.home img{
+    width: 350px;
+    border-radius: 10px;
+
+    transform: translateY(0px);
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-20px);        
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.home_texto{
+    padding: 100px;
+    text-align: left;
+}
+
+.home_texto h1{   
+    color: rgb(192, 192, 192);
+    font-size: 40px;
+}
+
+.home_texto .digitando{
+    color: rgb(192, 192, 192);
+    font-size: 60px;
+    animation: digitando 1s infinite;
+}
+
+
+@keyframes digitando {
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+
+.home_texto span{
+    font-family: 'Oleo Script', cursive;
+    color: rgb(255, 46, 46);
+}
+
+.home_texto h2{
+    color: white;    
+    line-height: 0 20px;
+}
+
+.home_texto .ultimo{
+    margin-bottom: 40px;
+}
+
+.home_texto a{
+    padding: 20px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.home_texto a:hover{
+    background-color: rgb(155, 155, 155);
+    color: rgb(48, 48, 48);
+    transition: 0.5s;
+}
+
+/*responsive home*/
+
+@media screen and (min-width: 1000px) and (max-width: 1430px){
+    .home{
+        padding: 5vh 5%;
+    }
+    .home_texto{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 878px) {
+    .home{
+        padding: 8% 5%;
+    }
+    .home_texto{
+        padding: 0;
+    }
+    .home_texto h1{
+        font-size: 35px;
+    }
+    .home img{
+        
+        width: 300px;
+    }
+    
+}
+@media screen and (max-width: 878px) and (min-width: 751px){
+    .home{
+        padding: 0 5%;
+    }
+    .home_texto{
+        padding: 0;
+    }
+    .home_texto h1{
+        font-size: 35px;
+    }
+    .home_texto h2{
+        font-size: 20px;
+    }
+
+    .home img{
+        
+        width: 250px;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .home{
+        padding: 5vh 5%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 20px;
+    }
+    .home_texto{
+        padding: 0;
+    }
+    .home_texto h1{
+        font-size: 30px;
+    }
+    .home_texto .digitando{
+        color: rgb(192, 192, 192);
+        font-size: 30px;
+        animation: digitando 1s infinite;
+    }
+    .home img{
+        
+        width: 200px;
+    }
+    .home_texto h2{
+        line-height: 20px 0;
+        font-size: 25px;
+    }
+
+}
+
+
+/*fim responsive home*/
+
+/*fim home*/
+
+/*tecnologias*/
+
+.tecnologias{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 20%;
+    flex-direction: row;
+
+    background-color: rgb(112, 112, 112);
+}
+
+.tecnologias img{
+    width: 80px;
+    filter: grayscale(1);
+}
+
+.tecnologias img:hover{
+    filter: grayscale(0);    
+}
+
+/*fim tecnologias*/
+
+/*sobre mim*/
+
+.sobre{
+    padding: 5% 10%;
+    margin: 30px 10%;
+    margin-top: 30px;
+    background-color: rgb(48, 48, 48);
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgb(66, 66, 66);
+    display: grid;
+    grid-template-rows: 20vh auto;
+}  
+
+.sobre_mim{
+    justify-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+}
+
+.sobre_mim h1{
+    font-size: 50px;
+    font-family: 'Oleo Script', cursive;
+    color: rgb(255, 46, 46);
+}
+
+.sobre_mim h2{
+    margin-bottom: 20px;
+    color: rgb(153, 153, 153);
+}
+
+.sobre_mim span{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(255, 46, 46);
+    border-radius: 50%;
+    display: block;
+}
+
+.sobre_mim .cima{
+    transform: translateY(-10px);
+    animation: pular1 2s infinite;
+}
+
+.sobre_mim .baixo{
+    transform: translateY(0);
+    animation: pular2 2s infinite;
+}
+
+@keyframes pular1 {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes pular2 {
+    0%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+.texto p{
+    font-size: 20px;
+    color: rgb(207, 207, 207);
+}
+
+.texto span{
+    color: rgb(255, 63, 63);
+}
+
+
+
+/*fim sobre mim*/
+
+/*portifolio*/
+
+.portifolio{
+    margin: 50px 10%;
+    background-color: rgb(48, 48, 48);
+    padding: 5% 10%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgb(66, 66, 66);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.portifolio h1{
+    color: rgb(192, 192, 192);
+    font-size: 30px;
+}
+
+.lista_projeto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.lista_projeto .iniciar{
+    height: 200px;
+    border: 2px solid black;
+    display: flex;
+}
+
+.lista_projeto .active_portfolio{
+    height: 200px;
+    border: 2px solid black;
+    display: flex;
+}
+
+.lista_projeto a{
+    display: none;
+}
+
+.lista_projeto a:hover{
+    border: 2px solid white;
+}
+
+.lista_projeto img{
+    justify-self: center;
+    align-self: center;
+    width: 270px;
+}
+
+.portifolio a.active_btn{
+    display: block;
+}
+
+.portifolio a{
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: bold;
+    display: none;
+}
+
+.portifolio a:hover{
+    background-color: rgb(155, 155, 155);
+    color: rgb(48, 48, 48);
+    transition: 1s;
+}
+
+/*fim portifolio*/
+
+/*contato*/
+
+.contato{
+    margin: 50px 10%;
+    background-color: rgb(29, 29, 29);
+    padding: 5% 10%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgb(15, 15, 15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.contato h1{
+    color: rgb(192, 192, 192);
+    font-size: 30px;
+}
+
+.contato .redes_sociais{
+    display: flex;
+    justify-content: center;
+    flex-direction: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.contato .redes_sociais div{
+    width: 294px;
+    text-align: center;
+    border: 1px solid gray;
+}
+.redes_sociais div:hover{
+    background-color: rgb(65, 64, 64);
+}
+.redes_sociais img{
+    width: 100px;
+    padding: 20px;
+}
+
+.redes_sociais p{
+    font-size: 20px;
+    color: rgb(211, 211, 211);
+    font-weight: bold;
+    line-height: 50px;
+}
+.redes_sociais p a{
+    font-size: 20px;
+    color: rgb(211, 211, 211);
+    font-weight: bold;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+/*fim contato*/
+
+
+/*footer*/
+
+footer{
+    background-color: rgb(20, 20, 20);
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p{
+    font-size: 20px;
+    color: rgb(189, 189, 189);
+}
+
+/*fim footer*/
