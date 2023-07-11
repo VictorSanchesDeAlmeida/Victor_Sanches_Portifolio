@@ -284,18 +284,22 @@ header h1 span{
 /*tecnologias*/
 
 .tecnologias{
-    height: 10vh;
+    height: 15vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 20px 20%;
     flex-direction: row;
 
-    background-color: rgb(112, 112, 112);
+    background-image: url('./img/Code_background.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100vw;
 }
 
 .tecnologias img{
-    width: 80px;
+    width: 100px;
     filter: grayscale(1);
 }
 
