@@ -40,8 +40,9 @@
                     <h1 class="digitar">Victor Sanches.</h1> <span class="digitando">|</span>
                 </div>
                 <h2 class="ultimo">Desenvolvedor <span style="font-style: italic;">FRONT-END</span></h2>
-                <div style="display: flex; gap: 30px;">
+                <div class="btn_link" style="display: flex; gap: 30px; flex-direction: row; justify-content: center; align-items: center;">
                     <a href="#">Download CV</a>
+                    <a href="https://github.com/VictorSanchesDeAlmeida" target="_blank">Git-hub</a>
                     <!--<a href="#">Git-hub</a>-->
                 </div>
                 
@@ -64,14 +65,13 @@
     <section class="sobre" id="sobre">
         <div class="sobre_mim" >
             <h1>Sobre Mim</h1>
-            <h2>Perfil profissional - Aqui está tudo sobre mim</h2>
+            <h2>Perfil profissional - Aqui está um pouco sobre mim</h2>
             <div style="display: flex; gap: 10px; justify-content: center;">
                 <span class="cima"></span>
                 <span class="baixo"></span>
                 <span class="cima"></span>
             </div>
         </div>
-        <br>
         <div class="texto" >
             <p>
                 Inicie minha jornada na área da programação em 2019, 
@@ -95,7 +95,6 @@
             <p>
                 Algumas das tecnologias que sei no momento são: <span>HTML, CSS e JavaScript</span>.
             </p>
-            <br>
         </div>
     </section>
     <!--fim sobre-->
@@ -106,16 +105,34 @@
         <h1>Portifolio</h1>
         <br>
         <div class="lista_projeto">
-            <a class="iniciar" ><img src="./img/em_breve-branco.png" alt="progeto"></a>
-            <a class="iniciar" ><img src="./img/em_breve-branco.png" alt="progeto"></a>
-            <a class="iniciar" ><img src="./img/em_breve-branco.png" alt="progeto"></a>
-            <a id="portifolio_exibir1"><img src="./img/em_breve-branco.png" alt="progeto"></a>
-            <a id="portifolio_exibir2"><img src="./img/em_breve-branco.png" alt="progeto"></a>
-            <a id="portifolio_exibir3"><img src="./img/em_breve-branco.png" alt="progeto"></a>
+            <a class=" card">
+                <div class="background_calculadora"></div>
+                <div class="port_tecnologia"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            </a>
+            <a class="card">
+                <div class="background_empty"></div>
+                <div></div>
+            </a>
+            <a class="card">
+                <div class="background_empty"></div>
+                <div></div>
+            </a>
+            <a id="portifolio_exibir1">
+                <div class="background_empty"></div>
+                <div></div>
+            </a>
+            <a id="portifolio_exibir2">
+                <div class="background_empty"></div>
+                <div></div>
+            </a>
+            <a id="portifolio_exibir3">
+                <div class="background_empty"></div>
+                <div></div>
+            </a>
         </div>
         <br>
-        <a class="active_btn" id="btnPortifolio"><h2>Mostrar mais</h2></a >
-        <a href="#btnPortifolio" id="esconder_portifolio"><h2>Mostrar menos</h2></a>
+        <a class="active_btn btn_port" id="btnPortifolio"><h2>Mostrar mais</h2></a >
+        <a class="btn_port" id="esconder_portifolio"><h2>Mostrar menos</h2></a>
         <br>
     </section>
     <!--fim portifolio-->

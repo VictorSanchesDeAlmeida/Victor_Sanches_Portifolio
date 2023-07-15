@@ -16,7 +16,7 @@ body{
 
 header{
     width: 100%;
-    height: 8vh;
+    height: 80px;
     background-color: rgba(8, 8, 8, 0.904);
     display: flex;
     flex-direction: row;
@@ -64,6 +64,14 @@ header h1 span{
 
     @media only screen and (max-width: 750px) {
         
+        header h1{
+            font-size: 25px;
+        }
+
+        header span {
+            font-size: 25px;
+        }
+
         .menu{
             display: flex;
             flex-direction: column;
@@ -82,9 +90,9 @@ header h1 span{
            display: none;
            position: absolute;
            width: 100%;
-           top: 8vh;
+           top: 80px;
            background-color: rgba(8, 8, 8, 0.904);
-           height: 40vh;
+           height: 380px;
         }
 
         .navegacao.active{
@@ -110,7 +118,7 @@ header h1 span{
 
 
 .home{
-    height: 70vh;
+    height: 680px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -120,7 +128,7 @@ header h1 span{
 }
 
 .home img{
-    width: 350px;
+    height: 70%;
     border-radius: 10px;
 
     transform: translateY(0px);
@@ -222,7 +230,7 @@ header h1 span{
         font-size: 35px;
     }
     .home img{
-        
+        height: auto;
         width: 300px;
     }
     
@@ -230,6 +238,7 @@ header h1 span{
 @media screen and (max-width: 878px) and (min-width: 751px){
     .home{
         padding: 0 5%;
+        height: 750px;
     }
     .home_texto{
         padding: 0;
@@ -242,18 +251,25 @@ header h1 span{
     }
 
     .home img{
-        
+        height: auto;
         width: 250px;
     }
 }
-@media only screen and (max-width: 750px) {
+@media screen and (max-width: 750px){
     .home{
         padding: 5vh 5%;
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
         gap: 20px;
+        height: 680px;
     }
+
+    .home img{
+        width: 200px;
+        height: auto;
+    }
+
     .home_texto{
         padding: 0;
     }
@@ -265,13 +281,13 @@ header h1 span{
         font-size: 30px;
         animation: digitando 1s infinite;
     }
-    .home img{
-        
-        width: 200px;
-    }
     .home_texto h2{
         line-height: 20px 0;
         font-size: 25px;
+    }
+
+    .home_texto .btn_link{
+        font-size: 13px;
     }
 
 }
@@ -284,7 +300,7 @@ header h1 span{
 /*tecnologias*/
 
 .tecnologias{
-    height: 15vh;
+    height: 162px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -295,7 +311,7 @@ header h1 span{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100vw;
+    background-size: 2560px;
 }
 
 .tecnologias img{
@@ -305,6 +321,17 @@ header h1 span{
 
 .tecnologias img:hover{
     filter: grayscale(0);    
+}
+
+@media only screen and (max-width: 750px) {
+    .tecnologias{
+        height: 100px;
+        padding: 20px 5%;
+    }
+    
+    .tecnologias img{
+        width: 70px;
+    }
 }
 
 /*fim tecnologias*/
@@ -319,7 +346,7 @@ header h1 span{
     border-radius: 10px;
     box-shadow: 1px 1px 8px rgb(66, 66, 66);
     display: grid;
-    grid-template-rows: 20vh auto;
+    grid-template-rows: 216px auto;
 }  
 
 .sobre_mim{
@@ -327,7 +354,7 @@ header h1 span{
     text-align: center;
     display: flex;
     flex-direction: column;
-    height: 15vh;
+
 }
 
 .sobre_mim h1{
@@ -392,6 +419,45 @@ header h1 span{
     color: rgb(255, 63, 63);
 }
 
+@media screen and (max-width: 789px) and (min-width:400px){
+    .sobre{
+        height: 700px;
+        grid-template-rows: 160px auto;
+        padding: 5px 5%;
+    }
+
+    .sobre_mim h1{
+        font-size: 30px;
+    }
+    .sobre_mim h2{
+        font-size: 18px;
+    }
+    
+    .texto{
+        overflow-y: auto;
+    }
+
+
+    .sobre_mim span{
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media screen and (max-width: 399px){
+    .sobre{
+        padding: 5px 5%;
+        margin: 30px 5%;
+    }
+
+    .texto p{
+        font-size: 15px;
+    }
+
+    .texto span{
+        font-size: 15px;
+    }
+}
 
 
 /*fim sobre mim*/
@@ -421,37 +487,74 @@ header h1 span{
     flex-wrap: wrap;
     gap: 20px;
 }
-.lista_projeto .iniciar{
-    height: 200px;
-    border: 2px solid black;
-    display: flex;
-}
-
-.lista_projeto .active_portfolio{
-    height: 200px;
-    border: 2px solid black;
-    display: flex;
-}
 
 .lista_projeto a{
     display: none;
-}
-
-.lista_projeto a:hover{
-    border: 2px solid white;
-}
-
-.lista_projeto img{
-    justify-self: center;
-    align-self: center;
-    width: 270px;
+    cursor: pointer;
 }
 
 .portifolio a.active_btn{
     display: block;
 }
 
-.portifolio a{
+.portifolio .lista_projeto .card{
+    width: 320px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.portifolio .lista_projeto .card .background_empty{
+    width: 100%;
+    height: 180px;
+    background-image: url(./img/em_breve-branco.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.portifolio .lista_projeto .card .background_calculadora{
+    width: 100%;
+    height: 180px;
+    border-radius: 8px 8px 0px 0px;
+    background-image: url(./img/calculadora.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.portifolio .lista_projeto .card .port_tecnologia{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.portifolio .lista_projeto .card .port_tecnologia span{
+    background-color: rgb(128, 126, 126);
+    padding: 5px;
+    border-radius: 35px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.portifolio .lista_projeto .card .port_tecnologia:hover{
+    transition: 1s;
+}
+
+
+.portifolio .lista_projeto .card .port_tecnologia span:hover{
+    transition: 1s;
+    background-color: rgb(66, 66, 66);
+    color: rgb(187, 187, 187);
+}
+
+.portifolio .btn_port{
     background-color: transparent;
     cursor: pointer;
     padding: 10px;
@@ -466,6 +569,53 @@ header h1 span{
     background-color: rgb(155, 155, 155);
     color: rgb(48, 48, 48);
     transition: 1s;
+}
+
+@media screen and (max-width: 430px) {
+    .portifolio{
+        margin: 50px 5%;
+        padding: 5px 2%;
+    }
+
+    .lista_projeto img{
+        width: 200px;
+    }
+
+    .portifolio a{
+        font-size: 10px;
+    }
+
+    .portifolio .lista_projeto .card{
+        width: 240px;
+        height: 234px;
+        
+    
+    }
+    
+    .portifolio .lista_projeto .card .background_empty{
+        width: 100%;
+        height: 135px;
+        background-image: url(./img/em_breve-branco.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .portifolio .lista_projeto .card .background_calculadora{
+        width: 100%;
+        height: 135px;
+        border-radius: 8px 8px 0px 0px;
+        background-image: url(./img/calculadora.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .portifolio .lista_projeto .card .port_tecnologia{
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
 }
 
 /*fim portifolio*/
@@ -525,6 +675,38 @@ header h1 span{
     cursor: pointer;
 }
 
+@media screen and (max-width: 700px) and (min-width: 381px) {
+    .contato h1{
+        font-size: 25px;
+        margin: 25px 0;
+    }
+}   
+
+@media screen and (max-width: 380px){
+    .contato{
+        margin: 50px 5%;
+        padding: 5% 2%;
+    }
+
+    .contato .redes_sociais div{
+        width: 100%;
+    }
+
+    .contato h1{
+        font-size: 25px;
+        line-height: 50px;
+        margin: 20px 0;
+    }
+
+    .redes_sociais img{
+        width: 60px;
+    }
+
+    .redes_sociais p{
+        font-size: 15px;
+    }
+}
+
 /*fim contato*/
 
 
@@ -539,8 +721,20 @@ footer{
 }
 
 footer p{
-    font-size: 20px;
+    font-size: 18px;
     color: rgb(189, 189, 189);
+}
+
+@media screen and (max-width: 1000px) and (min-width: 750px){
+    footer p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    footer p {
+        font-size: 8px;
+    }
 }
 
 /*fim footer*/
