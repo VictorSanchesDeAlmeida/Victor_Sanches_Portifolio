@@ -101,39 +101,60 @@
 
     <!--portifolio-->
     <section class="portifolio" id="portifolio">
-        <br>
+        
         <h1>Portifolio</h1>
-        <br>
+        
         <div class="lista_projeto">
-            <a class=" card">
-                <div class="background_lampada"></div>
-                <div class="port_tecnologia"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-            </a>
-            <a class=" card">
-                <div class="background_calculadora"></div>
-                <div class="port_tecnologia"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-            </a>
-            <a class="card">
-                <div class="background_empty"></div>
-                <div></div>
-            </a>
-            <a id="portifolio_exibir1">
-                <div class="background_empty"></div>
-                <div></div>
-            </a>
-            <a id="portifolio_exibir2">
-                <div class="background_empty"></div>
-                <div></div>
-            </a>
-            <a id="portifolio_exibir3">
-                <div class="background_empty"></div>
-                <div></div>
-            </a>
+            <!--Projetos em amostra-->
+            <div class="projetos">
+                
+                <img src="./img/Lampada_JS.png">
+                
+                <div class="description">
+                    <h2>Lampada JS</h2>
+                    <p>Tecnologias: HTML, CSS e JavaScript</p>
+                </div>
+                <hr>                    
+                <div class="description">
+                    <a href="https://victorsanchesdealmeida.github.io/Lampada_js/" target="_blank"><p class="link_projeto">Acessar projeto</p></a>
+                </div>
+
+            </div>
+            <div class="projetos">
+                <img src="./img/calculadora.png">
+
+                <div class="description">
+                    <h2>Calculadora JS</h2>
+                    <p>Tecnologias: HTML, CSS e JavaScript</p>
+                </div>
+                <hr>                    
+                <div class="description">
+                    <a href="https://victorsanchesdealmeida.github.io/Calculador-js/" target="_blank"><p class="link_projeto">Acessar projeto</p></a>
+                </div>
+
+            </div>            
+            <div class="projetos">
+                <img src="./img/em_breve-branco.png">
+            </div>
+            <!--Fim projetos em amostra-->
+            <!--Projetos Escondidos-->
+            <div class="lista_projeto desactive" id="escondido">
+
+                <div class="projetos">
+                    <img src="./img/em_breve-branco.png">
+                </div>
+                <div class="projetos">
+                    <img src="./img/em_breve-branco.png">
+                </div>
+                <div class="projetos">
+                    <img src="./img/em_breve-branco.png">
+                </div>
+
+            </div>
+            <!-- Fim projetos Escondidos-->
         </div>
-        <br>
-        <a class="active_btn btn_port" id="btnPortifolio"><h2>Mostrar mais</h2></a >
-        <a class="btn_port" id="esconder_portifolio"><h2>Mostrar menos</h2></a>
-        <br>
+        <button class="mostrar active" id="mostrar">Mostrar mais</button>
+        <button class="esconder" id="esconder">Mostrar menos</button>
     </section>
     <!--fim portifolio-->
 

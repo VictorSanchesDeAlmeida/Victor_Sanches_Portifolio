@@ -28,29 +28,21 @@
   ativaLetra(titulo);
 
   //portifolio
+  
 
-  const btnPortifolio = document.getElementById('btnPortifolio');
-  const btnPortifolio2 = document.getElementById('esconder_portifolio');
+  const btnMostrarMais = document.getElementById('mostrar');
+  const btnMostrarMenos = document.getElementById('esconder');
+  const projetosEscondido = document.getElementById('escondido');
 
-  function tugglePurtfolio(){
-    const portifolio1 = document.getElementById('portifolio_exibir1');
-    const portifolio2 = document.getElementById('portifolio_exibir2');
-    const portifolio3 = document.getElementById('portifolio_exibir3');
-    portifolio1.classList.toggle('card');
-    portifolio2.classList.toggle('card');
-    portifolio3.classList.toggle('card');
-
-    const troca = document.getElementById('esconder_portifolio');
-    troca.classList.toggle('active_btn');
-
-    const troca1 =document.getElementById('btnPortifolio');
-    troca1.classList.toggle('active_btn');
-
+  function toggle(){
+    btnMostrarMais.classList.toggle('active');
+    btnMostrarMenos.classList.toggle('active');
+    projetosEscondido.classList.toggle('desactive');
   }
-  
-  btnPortifolio.addEventListener('click', tugglePurtfolio);
-  btnPortifolio2.addEventListener('click', tugglePurtfolio);
-  
+
+  btnMostrarMais.addEventListener('click', toggle);
+  btnMostrarMenos.addEventListener('click', toggle);
+
   //--------------------------------------------------------------------
 
 
