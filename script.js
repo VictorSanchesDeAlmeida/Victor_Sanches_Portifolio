@@ -32,12 +32,16 @@
 
   const btnMostrarMais = document.getElementById('mostrar');
   const btnMostrarMenos = document.getElementById('esconder');
-  const projetosEscondido = document.getElementById('escondido');
+  const projetosEscondido1 = document.getElementById('escondido1');
+  const projetosEscondido2 = document.getElementById('escondido2');
+  const projetosEscondido3 = document.getElementById('escondido3');
 
   function toggle(){
     btnMostrarMais.classList.toggle('active');
     btnMostrarMenos.classList.toggle('active');
-    projetosEscondido.classList.toggle('desactive');
+    projetosEscondido1.classList.toggle('desactive');
+    projetosEscondido2.classList.toggle('desactive');
+    projetosEscondido3.classList.toggle('desactive');
   }
 
   btnMostrarMais.addEventListener('click', toggle);
