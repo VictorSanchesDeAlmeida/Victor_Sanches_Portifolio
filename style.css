@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
@@ -141,24 +142,24 @@ header h1 span{
     @media only screen and (max-width: 750px) {
         
         header h1{
-            font-size: 25px;
+            font-size: 20px;
         }
 
         header span {
-            font-size: 25px;
+            font-size: 20px;
         }
 
         .menu{
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 7px;
             cursor: pointer;
-            padding: 20px;
+            padding: 15px;
         }
         
 
         .menu span{
-            padding: 1px 15px;
+            padding: 1px 12px;
             background-color: white;
         }
         
@@ -170,6 +171,9 @@ header h1 span{
            background-color: rgba(8, 8, 8, 0.904);
            height: 380px;
            left: 0px;
+        }
+        .display-right{
+            gap: 1;
         }
 
         .navegacao.active{
@@ -593,7 +597,7 @@ header h1 span{
 
 .lista_projeto .projetos{
     width: 340px;
-    height: 320px;
+    height: auto;
     border: 1px solid rgb(14, 14, 14);
     border-radius: 5px;
     box-shadow: 2px 4px 10px rgb(14, 14, 14);
@@ -620,6 +624,13 @@ header h1 span{
     border-radius: 20px;
     background-color: rgb(24, 24, 24);
     width: 125px;
+    font-size: 13px;
+}
+
+@media screen and (max-width: 450px) {
+    .portifolio {
+        padding: 5% 5%;
+    }    
 }
 
 
@@ -694,7 +705,7 @@ header h1 span{
     }
 
     .contato .redes_sociais div{
-        width: 100%;
+        width: 90%;
     }
 
     .contato h1{
@@ -704,7 +715,7 @@ header h1 span{
     }
 
     .redes_sociais img{
-        width: 60px;
+        width: 100px;
     }
 
     .redes_sociais p{
