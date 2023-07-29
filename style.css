@@ -60,6 +60,81 @@ header h1 span{
     display: none;
 }
 
+.display-right{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.Thema{
+    border: 1px solid white;
+    border-radius: 50px;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    align-items: center;
+}
+
+.Thema img{
+    width: 25px;
+    height: 25px;
+}
+
+.selector{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background-color: white;
+    top: 4px;
+    left: 5px;
+    animation: slider-lightToLight 0.2s linear;
+}
+
+.selector-light{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background-color: rgb(49, 49, 49);
+    top: 4px;
+    left: 33px;    
+    animation: slider-darkToLight 0.2s linear;
+}
+
+@keyframes slider-lightToLight {
+    0%{
+        transform: translateX(30px);
+        background-color: rgb(49, 49, 49);        
+    }
+    50%{
+        transform: translate(19px);
+        background-color: rgb(150, 150, 150);        
+    }
+    100%{
+        transform: translateX(5px);
+        background-color: rgb(245, 245, 245);
+    }
+}
+
+@keyframes slider-darkToLight {
+    0%{
+        transform: translateX(-30px);
+        background-color: rgb(245, 245, 245);
+    }
+    50%{
+        transform: translate(-19px);
+        background-color: rgb(150, 150, 150);
+    }
+    100%{
+        transform: translateX(-5px);
+        background-color: rgb(49, 49, 49);
+    }
+}
+
 
     /*responsive header*/
 
@@ -94,6 +169,7 @@ header h1 span{
            top: 80px;
            background-color: rgba(8, 8, 8, 0.904);
            height: 380px;
+           left: 0px;
         }
 
         .navegacao.active{

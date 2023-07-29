@@ -51,3 +51,15 @@
 
 
   //copiar redes sociais
+
+
+  const btnTheme = document.getElementById('Thema');
+  const discTheme = document.getElementById('selector');
+
+  function slider_theme(){
+      discTheme.classList.toggle('selector')
+      discTheme.classList.toggle('selector-light');
+    
+  }
+
+  btnTheme.addEventListener('click', slider_theme);
