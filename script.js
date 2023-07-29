@@ -55,10 +55,12 @@
 
   const btnTheme = document.getElementById('Thema');
   const discTheme = document.getElementById('selector');
+  const $html = document.querySelector('html');
 
   function slider_theme(){
       discTheme.classList.toggle('selector')
       discTheme.classList.toggle('selector-light');
+      $html.classList.toggle('light-mode');
     
   }
 

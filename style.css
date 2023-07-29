@@ -1,6 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+
+:root{
+    --bg-body: black;
+    --bg-head: #000000e7;
+    --head-text: white;
+    --bg-home: black;
+    --color-home: rgb(224, 224, 224);
+    --bg-section: rgb(20, 20, 20);
+    --color-section: rgb(228, 228, 228);
+    --btn-projeto: rgb(46, 46, 46);
+    --bg-footer: rgb(48, 48, 48);    
+    --color-footer: rgb(196, 196, 196);
+}
+
+.light-mode:root{
+    --bg-body: white;
+    --bg-head: rgba(255, 255, 255, 0.61);
+    --head-text: rgb(49, 49, 49);
+    --bg-home: rgb(255, 255, 255);
+    --color-home: rgb(49, 49, 49);
+    --bg-section: rgb(209, 209, 209);
+    --color-section: rgb(51, 51, 51);
+    --btn-projeto: rgb(236, 236, 236);
+    --color-footer: rgb(78, 78, 78);
+    --bg-footer: rgb(207, 207, 207);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -11,7 +38,7 @@
 }
 
 body{
-    background-color: rgb(27, 27, 27);
+    background-color: var(--bg-body);
 }
 
 /*header*/
@@ -19,7 +46,7 @@ body{
 header{
     width: 100%;
     height: 80px;
-    background-color: rgba(8, 8, 8, 0.904);
+    background-color: var(--bg-head);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -30,7 +57,7 @@ header{
 }
 
 header h1{
-    color: rgb(255, 232, 232);
+    color: var(--head-text);
 }
 
 header h1 span{
@@ -45,15 +72,15 @@ header h1 span{
 }
 
 .navegacao  a {
-    color: rgb(214, 214, 214);
+    color: var(--head-text);
     padding: 10px;
     border-radius: 10px;
 }
 
 .navegacao  a:hover{
     transition: 1s;
-    color: white;
-    background-color: gray;
+    color: rgb(255, 255, 255);
+    background-color: rgb(56, 56, 56);
     border-radius: 10px;
 }
 
@@ -68,7 +95,7 @@ header h1 span{
 }
 
 .Thema{
-    border: 1px solid white;
+    border: 1px solid var(--color-home);
     border-radius: 50px;
     width: 60px;
     height: 30px;
@@ -160,7 +187,7 @@ header h1 span{
 
         .menu span{
             padding: 1px 12px;
-            background-color: white;
+            background-color: var(--color-home);
         }
         
         .navegacao{
@@ -205,7 +232,7 @@ header h1 span{
     align-items: center;
     justify-content: space-around;
     padding: 40px 10%;
-    background-color: rgb(32, 32, 32);
+    background-color: var(--bg-home);
 }
 
 .home img{
@@ -236,12 +263,12 @@ header h1 span{
 }
 
 .home_texto h1{   
-    color: rgb(192, 192, 192);
+    color: var(--color-home);
     font-size: 40px;
 }
 
 .home_texto .digitando{
-    color: rgb(192, 192, 192);
+    color: var(--color-home);
     font-size: 60px;
     animation: digitando 1s infinite;
 }
@@ -264,11 +291,11 @@ header h1 span{
 
 .home_texto span{
     font-family: 'Oleo Script', cursive;
-    color: rgb(255, 46, 46);
+    color: red;
 }
 
 .home_texto h2{
-    color: white;    
+    color: var(--color-home);    
     line-height: 0 20px;
 }
 
@@ -278,8 +305,8 @@ header h1 span{
 
 .home_texto a{
     padding: 20px;
-    color: white;
-    border: 2px solid white;
+    color: var(--color-home);
+    border: 2px solid var(--color-section);
     border-radius: 5px;
     font-weight: bold;
 }
@@ -423,7 +450,7 @@ header h1 span{
     padding: 5% 10%;
     margin: 30px 10%;
     margin-top: 30px;
-    background-color: rgb(48, 48, 48);
+    background-color: var(--bg-section);
     border-radius: 10px;
     box-shadow: 1px 1px 8px rgb(66, 66, 66);
     display: grid;
@@ -441,18 +468,18 @@ header h1 span{
 .sobre_mim h1{
     font-size: 50px;
     font-family: 'Oleo Script', cursive;
-    color: rgb(255, 46, 46);
+    color: red;
 }
 
 .sobre_mim h2{
     margin-bottom: 20px;
-    color: rgb(153, 153, 153);
+    color: var(--color-section);
 }
 
 .sobre_mim span{
     height: 20px;
     width: 20px;
-    background-color: rgb(255, 46, 46);
+    background-color: red;
     border-radius: 50%;
     display: block;
 }
@@ -493,11 +520,11 @@ header h1 span{
 
 .texto p{
     font-size: 20px;
-    color: rgb(207, 207, 207);
+    color: var(--color-section);
 }
 
 .texto span{
-    color: rgb(255, 63, 63);
+    color: red;
 }
 
 @media screen and (max-width: 789px) and (min-width:400px){
@@ -547,7 +574,7 @@ header h1 span{
 
 .portifolio{
     margin: 50px 10%;
-    background-color: rgb(48, 48, 48);
+    background-color: var(--bg-section);
     padding: 5% 10%;
     border-radius: 10px;
     box-shadow: 1px 1px 8px rgb(66, 66, 66);
@@ -557,7 +584,7 @@ header h1 span{
     gap: 30px;
 }
 .portifolio h1{
-    color: rgb(192, 192, 192);
+    color: var(--color-section);
     font-size: 30px;
 }
 
@@ -581,16 +608,16 @@ header h1 span{
     display: block;
     width: 150px;
     height: 50px;
-    background-color: transparent;
-    border: 1px solid black;
+    background-color: var(--bg-head);
+    border: 1px solid transparent;
     cursor: pointer;
     border-radius: 10px;
     font-size: 17px;
-    color: rgb(182, 182, 182);
+    color: var(--color-home);
 }
 
 .portifolio .active:hover{
-    border: 2px solid rgb(160, 160, 160);
+    border: 2px solid black;
     background-color: rgb(80, 80, 80);
     color: black;
 }
@@ -600,7 +627,7 @@ header h1 span{
     height: auto;
     border: 1px solid rgb(14, 14, 14);
     border-radius: 5px;
-    box-shadow: 2px 4px 10px rgb(14, 14, 14);
+    box-shadow: 2px 4px 10px rgb(43, 43, 43);
 }
 
 .lista_projeto .projetos img{
@@ -613,8 +640,8 @@ header h1 span{
 }
 
 .lista_projeto .projetos .description h2,p{
-    margin: 10px 0;
-    color: white;
+    margin: 10px 0;    
+    color: var(--color-section);
 }
 
 .lista_projeto .projetos .description .link_projeto{
@@ -622,7 +649,7 @@ header h1 span{
     text-align: center;
     padding: 5px 0;
     border-radius: 20px;
-    background-color: rgb(24, 24, 24);
+    background-color: var(--btn-projeto);
     width: 125px;
     font-size: 13px;
 }
@@ -640,7 +667,7 @@ header h1 span{
 
 .contato{
     margin: 50px 10%;
-    background-color: rgb(29, 29, 29);
+    background-color: var(--bg-section);
     padding: 5% 10%;
     border-radius: 10px;
     box-shadow: 1px 1px 8px rgb(15, 15, 15);
@@ -652,7 +679,7 @@ header h1 span{
 }
 
 .contato h1{
-    color: rgb(192, 192, 192);
+    color: var(--color-section);
     font-size: 30px;
 }
 
@@ -679,7 +706,7 @@ header h1 span{
 
 .redes_sociais p{
     font-size: 20px;
-    color: rgb(211, 211, 211);
+    color: var(--color-section);
     font-weight: bold;
     line-height: 50px;
 }
@@ -729,7 +756,7 @@ header h1 span{
 /*footer*/
 
 footer{
-    background-color: rgb(20, 20, 20);
+    background-color: var(--bg-footer);
     height: 8vh;
     display: flex;
     align-items: center;
@@ -738,7 +765,7 @@ footer{
 
 footer p{
     font-size: 18px;
-    color: rgb(189, 189, 189);
+    color: var(--color-footer);
 }
 
 @media screen and (max-width: 1000px) and (min-width: 750px){
